@@ -8,7 +8,7 @@ I build **AI-powered products, automation systems, and beautiful websites** — 
 LLM chatbots and RAG pipelines to GoHighLevel/Make/n8n marketing automation and
 polished single-file client websites.
 
-[**🔗 LinkedIn**](https://linkedin.com/in/yahya-jarray) · [**🚀 Portfolio**](https://jryahia.github.io/portfolio-dashboard/) · [**✉️ Email**](mailto:yahiajarray43@gmail.com)
+[**🔗 LinkedIn**](https://linkedin.com/in/yahya-jarray) · [**🚀 Portfolio**](https://jryahia.github.io/straw-hat-dev-portfolio/) · [**✉️ Email**](mailto:yahiajarray43@gmail.com)
 
 ---
 
@@ -33,7 +33,7 @@ polished single-file client websites.
 - **n8n & Make Pipelines** — reporting, support inbox, e-commerce notifications, social media scheduling
 - **Business client websites** — modern single-file sites for local Italian businesses, live on GitHub Pages
 
-> See the full categorized showcase at **[portfolio-dashboard](https://jryahia.github.io/portfolio-dashboard/)**.
+> My One Piece–themed portfolio site: **[straw-hat-dev-portfolio](https://jryahia.github.io/straw-hat-dev-portfolio/)**.
 
 ---
 
