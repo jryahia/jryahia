@@ -166,9 +166,10 @@ def load_icons():
 def render_skills_svg(icons):
     """Animated tech-stack card: 3 grouped rows of skill tiles.
 
-    Every icon gently bobs in a wave (staggered delays, loops forever) and the
-    group titles fade-slide in on load. Pure CSS keyframes inside the SVG, so
-    the animation runs when the image is embedded via <img> in the README.
+    Titles slide in and land CENTERED with an underline growing out from the
+    middle; every icon pops in one by one (spring), then all icons float and
+    sway forever at varied speeds/phases; soft glow dots drift behind. Pure
+    CSS keyframes inside the SVG, so it animates via <img> in the README.
     """
     GROUPS = [
         ("FULL-STACK",
@@ -184,7 +185,7 @@ def render_skills_svg(icons):
     ]
     GREEN = "#39d353"
     ICON, GAP = 48, 12
-    TITLE_H, PAD = 34, 24
+    TITLE_H, PAD = 40, 24
     pitch = ICON + GAP
     max_row = max(len(g[1]) for g in GROUPS)
     W = max_row * pitch - GAP + 2 * PAD
@@ -196,22 +197,47 @@ def render_skills_svg(icons):
         f'xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" '
         f'viewBox="0 0 {W} {H}" fill="none">',
         "<style>",
-        "@keyframes wave{0%,100%{transform:translateY(0)}"
-        "50%{transform:translateY(-7px)}}",
-        ".ic{animation:wave 2.6s ease-in-out infinite}",
-        "@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}"
-        "to{opacity:1;transform:translateY(0)}}",
-        ".t{animation:fadeIn .8s ease forwards;opacity:0}",
+        "@keyframes pop{0%{opacity:0;transform:scale(.3)}"
+        "60%{transform:scale(1.18)}100%{opacity:1;transform:scale(1)}}",
+        ".pop{animation:pop .8s cubic-bezier(.2,.8,.3,1.35) forwards;"
+        "opacity:0;transform-box:fill-box;transform-origin:center}",
+        "@keyframes floaty{0%,100%{transform:translateY(0) rotate(-3deg)}"
+        "50%{transform:translateY(-9px) rotate(3deg)}}",
+        ".fl{animation:floaty 2.6s ease-in-out infinite;"
+        "transform-box:fill-box;transform-origin:center}",
+        "@keyframes titleIn{from{opacity:0;transform:translateX(-34px)}"
+        "to{opacity:1;transform:translateX(0)}}",
+        ".t{animation:titleIn .9s cubic-bezier(.2,.8,.3,1) forwards;opacity:0}",
+        "@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}",
+        ".ul{animation:grow .7s cubic-bezier(.2,.8,.3,1.2) forwards;"
+        "transform-box:fill-box;transform-origin:center}",
+        "@keyframes drift{0%,100%{transform:translateY(0);opacity:.18}"
+        "50%{transform:translateY(-18px);opacity:.55}}",
+        ".dot{animation:drift 5s ease-in-out infinite}",
         "</style>",
         f'<rect width="{W}" height="{H}" rx="16" fill="{OUTER_BG}"/>',
     ]
+    dots = [(60, 40), (W - 70, 46), (W // 2, 14), (70, H - 26), (W - 80, H - 30)]
+    for di, (dx, dy) in enumerate(dots):
+        parts.append(
+            f'<circle cx="{dx}" cy="{dy}" r="3" fill="{GREEN}" class="dot" '
+            f'style="animation-delay:-{di * 1.1}s;'
+            f'animation-duration:{4.4 + di * 0.7:.1f}s"/>'
+        )
     idx = 0
     for gi, (title, names) in enumerate(GROUPS):
         y = PAD + gi * (TITLE_H + ICON)
+        cx = W / 2
         parts.append(
-            f'<text x="{PAD}" y="{y + 14}" fill="{GREEN}" font-family="{FONT}" '
-            f'font-size="15" font-weight="800" letter-spacing="3" class="t" '
-            f'style="animation-delay:{gi * 0.25}s">{title}</text>'
+            f'<text x="{cx:.1f}" y="{y + 15}" fill="{GREEN}" font-family="{FONT}" '
+            f'font-size="15" font-weight="800" letter-spacing="4" '
+            f'text-anchor="middle" class="t" '
+            f'style="animation-delay:{gi * 0.3}s">{title}</text>'
+        )
+        parts.append(
+            f'<rect x="{cx - 46:.1f}" y="{y + 22}" width="92" height="2" rx="1" '
+            f'fill="{GREEN}" class="ul" '
+            f'style="animation-delay:{gi * 0.3 + 0.35}s"/>'
         )
         row_w = len(names) * pitch - GAP
         x0 = (W - row_w) / 2
@@ -220,10 +246,14 @@ def render_skills_svg(icons):
             if not body:
                 continue
             x = x0 + ni * pitch
-            delay = -idx * 0.13
+            pop_delay = idx * 0.055
+            float_dur = 2.2 + (idx % 5) * 0.3
+            float_delay = -idx * 0.24
             parts.append(
                 f'<g transform="translate({x:.1f},{y + TITLE_H}) scale({scale:.4f})">'
-                f'<g class="ic" style="animation-delay:{delay:.2f}s">{body}</g></g>'
+                f'<g class="pop" style="animation-delay:{pop_delay:.2f}s">'
+                f'<g class="fl" style="animation-delay:{float_delay:.2f}s;'
+                f'animation-duration:{float_dur:.1f}s">{body}</g></g></g>'
             )
             idx += 1
     parts.append("</svg>")
