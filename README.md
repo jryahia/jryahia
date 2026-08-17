@@ -67,7 +67,7 @@ I design and build **AI-powered products, automation systems, and polished websi
   <img src="https://raw.githubusercontent.com/jryahia/jryahia/main/output/streak.svg" alt="GitHub Streak" />
 </a>
 
-<img src="https://raw.githubusercontent.com/jryahia/jryahia/main/output/snake.svg" alt="Contribution Snake" />
+<img src="https://raw.githubusercontent.com/jryahia/jryahia/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" />
 
 </div>
 
