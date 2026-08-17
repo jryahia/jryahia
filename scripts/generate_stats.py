@@ -72,17 +72,23 @@ def main():
     top_langs = sorted(langs.items(), key=lambda kv: -kv[1])[:5]
 
     commits = "n/a"
+    streaks = {"current": "n/a", "longest": "n/a", "year": "n/a"}
     if TOKEN:
         try:
             data = graphql(
-                "{ user(login: \"%s\") { contributionsCollection {"
-                " totalCommitContributions } } }" % USER
+                '{ user(login: "%s") { contributionsCollection {'
+                " totalCommitContributions contributionCalendar { totalContributions"
+                " weeks { contributionDays { date contributionCount } } } } } }" % USER
             )
+            cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
             commits = data["data"]["user"]["contributionsCollection"][
                 "totalCommitContributions"
             ]
-        except Exception:
+            streaks = compute_streaks(cal["weeks"])
+            streaks["year"] = cal["totalContributions"]
+        except Exception as e:
             commits = "n/a"
+            print(f"WARN streak/commit data: {e}")
 
     followers = user["followers"]
 
@@ -91,8 +97,99 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "stats.svg"), "w", encoding="utf-8") as f:
         f.write(svg)
+
+    streak_svg = render_streak_svg(streaks)
+    with open(os.path.join(out_dir, "streak.svg"), "w", encoding="utf-8") as f:
+        f.write(streak_svg)
     print(f"OK stats.svg: repos={repo_total} (incl. private) commits={commits} "
-          f"forks={forks} followers={followers} langs={dict(top_langs)}")
+          f"forks={forks} followers={followers} langs={dict(top_langs)} "
+          f"streak={streaks}")
+
+
+def compute_streaks(weeks):
+    """Current (today or yesterday-anchored), longest and yearly totals from the
+    contribution calendar — same semantics as GitHub's own streak."""
+    days = []
+    for w in weeks:
+        for d in w["contributionDays"]:
+            days.append((d["date"], d["contributionCount"]))
+    if not days:
+        return {"current": 0, "longest": 0, "year": 0}
+
+    counts = [c for _, c in days]
+    year = sum(counts)
+
+    # longest run of consecutive contributing days
+    longest = cur = 0
+    for c in counts:
+        cur = cur + 1 if c > 0 else 0
+        longest = max(longest, cur)
+
+    # current streak: count back from today; if today is 0, start from yesterday
+    today = days[-1][1]
+    i = len(days) - 1
+    if today == 0:
+        i -= 1
+    current = 0
+    while i >= 0 and days[i][1] > 0:
+        current += 1
+        i -= 1
+    return {"current": current, "longest": longest, "year": year}
+
+
+def render_streak_svg(streaks):
+    """GitHub-green contribution streak card — animated current-streak counter."""
+    W, H = 560, 190
+    GREEN = "#39d353"
+    tiles = [("CURRENT STREAK", f"{streaks['current']}", "days"),
+             ("TOTAL CONTRIBUTIONS", f"{streaks['year']}", "this year"),
+             ("LONGEST STREAK", f"{streaks['longest']}", "days")]
+    tx = [30, 210, 390]
+    tw, th, ty = 140, 92, 66
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+        f'viewBox="0 0 {W} {H}" fill="none">',
+        "<style>"
+        "@keyframes pop { 0% { opacity: 0; transform: scale(0.6); } "
+        "60% { transform: scale(1.15); } 100% { opacity: 1; transform: scale(1); } }"
+        "@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }"
+        ".pop { animation: pop 0.9s cubic-bezier(.2,.8,.3,1.2) forwards; }"
+        ".fade { animation: fadein 0.8s ease forwards; opacity: 0; }"
+        "</style>",
+        f'<rect width="{W}" height="{H}" rx="16" fill="{OUTER_BG}"/>',
+        f'<text x="30" y="44" fill="{GREEN}" font-family="{FONT}" '
+        f'font-size="20" font-weight="800" letter-spacing="4">STREAK</text>',
+        f'<text x="530" y="44" fill="{MUTED}" font-family="{FONT}" font-size="13" '
+        f'text-anchor="end">@{USER} · updated daily</text>',
+    ]
+
+    for i, ((label, value, unit), x) in enumerate(zip(tiles, tx)):
+        cx = x + tw / 2
+        parts.append(
+            f'<rect x="{x}" y="{ty}" width="{tw}" height="{th}" rx="12" '
+            f'fill="{TILE_BG}" stroke="{BORDER}" stroke-width="1"/>'
+        )
+        anim = 'class="pop"' if i == 0 else 'class="fade"'
+        color = GREEN if i == 0 else TEXT
+        parts.append(
+            f'<text x="{cx}" y="118" fill="{color}" font-family="{FONT}" '
+            f'font-size="40" font-weight="800" text-anchor="middle" {anim}>'
+            f'{value}</text>'
+        )
+        parts.append(
+            f'<text x="{cx}" y="142" fill="{MUTED}" font-family="{FONT}" '
+            f'font-size="12" font-weight="600" letter-spacing="2" '
+            f'text-anchor="middle">{label}</text>'
+        )
+        parts.append(
+            f'<text x="{cx}" y="156" fill="{GREEN}" font-family="{FONT}" '
+            f'font-size="11" font-weight="600" letter-spacing="1" '
+            f'text-anchor="middle">{unit}</text>'
+        )
+
+    parts.append("</svg>")
+    return "\n".join(parts)
 
 
 def render_svg(repos, commits, forks, followers, top_langs, total_lang):

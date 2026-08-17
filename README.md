@@ -49,7 +49,7 @@ I design and build **AI-powered products, automation systems, and polished websi
 </a>
 
 <a href="https://github.com/jryahia">
-  <img src="https://streak-stats.demolab.com/?user=jryahia&theme=dark&hide_border=true&background=0a0a0b&border=21262d&stroke=21262d&ring=f97316&fire=f97316&currStreakNum=e6edf3&sideNums=e6edf3&currStreakLabel=f97316&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" />
+  <img src="https://raw.githubusercontent.com/jryahia/jryahia/main/output/streak.svg" alt="GitHub Streak" />
 </a>
 
 <img src="https://raw.githubusercontent.com/jryahia/jryahia/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" />

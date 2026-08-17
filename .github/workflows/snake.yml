@@ -18,7 +18,7 @@ jobs:
         with:
           github_user_name: jryahia
           outputs: |
-            dist/github-contribution-grid-snake-dark.svg?color_snake=#f97316&color_dots=#0a0a0b,#161b22,#30363d,#f97316,#fdba74
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#39d353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v4
