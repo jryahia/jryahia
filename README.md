@@ -24,7 +24,8 @@ I design and build **AI-powered products, automation systems, and polished websi
 
 | Focus | Stack & Tools |
 |---|---|
-| **AI & LLM** | OpenAI · Anthropic · DeepSeek, RAG, embeddings, vector DBs, AI agents, prompt engineering |
+| **AI & LLM** | OpenAI / Anthropic / DeepSeek, RAG, embeddings, vector DBs, AI agents, voice cloning |
+| **Prompt Engineering** | structured outputs, few-shot / chain-of-thought, tool & function calling, prompt evaluation |
 | **Backend** | Python, FastAPI, SQLAlchemy, async servers, REST APIs |
 | **Automation** | n8n, Make.com, GoHighLevel, Zapier, Playwright, CRM integrations |
 | **Web** | HTML/CSS, JavaScript, React, TypeScript, Three.js, single-file client sites |
@@ -34,8 +35,22 @@ I design and build **AI-powered products, automation systems, and polished websi
 
 ## Tech Stack
 
+**Full-Stack**
+
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css,react,nodejs,fastapi,postgres,mysql,docker,git,github,linux,redis,nginx,threejs,vite,playwright,selenium,figma&perline=21" alt="Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=python,javascript,typescript,react,nextjs,nodejs,express,fastapi,mongodb,postgres,mysql,redis,docker,git&perline=14" alt="Full-Stack" />
+</p>
+
+**Prompt Engineering & AI Automation**
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=openai,anthropic,langchain,huggingface,n8n,playwright,selenium,postman,vercel,linux,github&perline=11" alt="AI & Automation" />
+</p>
+
+**Web Design**
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,threejs,vite,tailwind,figma,webflow,wordpress,ps,xd&perline=10" alt="Web Design" />
 </p>
 
 ---
@@ -52,7 +67,7 @@ I design and build **AI-powered products, automation systems, and polished websi
   <img src="https://raw.githubusercontent.com/jryahia/jryahia/main/output/streak.svg" alt="GitHub Streak" />
 </a>
 
-<img src="https://raw.githubusercontent.com/jryahia/jryahia/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" />
+<img src="https://raw.githubusercontent.com/jryahia/jryahia/main/output/snake.svg" alt="Contribution Snake" />
 
 </div>
 

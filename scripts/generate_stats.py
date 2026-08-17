@@ -102,6 +102,14 @@ def main():
     streak_svg = render_streak_svg(streaks)
     with open(os.path.join(out_dir, "streak.svg"), "w", encoding="utf-8") as f:
         f.write(streak_svg)
+
+    if TOKEN:
+        try:
+            snake_svg = render_snake_svg(cal["weeks"])
+            with open(os.path.join(out_dir, "snake.svg"), "w", encoding="utf-8") as f:
+                f.write(snake_svg)
+        except Exception as e:
+            print(f"WARN snake: {e}")
     print(f"OK stats.svg: repos={repo_total} (incl. private) commits={commits} "
           f"forks={forks} followers={followers} langs={dict(top_langs)} "
           f"streak={streaks}")
@@ -136,6 +144,84 @@ def compute_streaks(weeks):
         current += 1
         i -= 1
     return {"current": current, "longest": longest, "year": year}
+
+
+def lerp_hex(a, b, t):
+    a = a.lstrip("#")
+    b = b.lstrip("#")
+    ac = [int(a[i:i + 2], 16) for i in (0, 2, 4)]
+    bc = [int(b[i:i + 2], 16) for i in (0, 2, 4)]
+    return "#" + "".join(f"{round(ac[i] + (bc[i] - ac[i]) * t):02x}" for i in range(3))
+
+
+def render_snake_svg(weeks):
+    """Real blocky snake (head + body) that MOVES ONLY THROUGH THE CUBES.
+
+    The snake follows a serpentine path over the contribution grid; every
+    segment jumps discretely cell-to-cell (steps(1,end)) so it never slides
+    through the margins. Body segments trail the head like classic snake.
+    """
+    COLS, ROWS = 53, 7
+    CELL, SP = 12, 16
+    OX, OY = 2, 2
+    W, H = OX + (COLS - 1) * SP + CELL + 2, OY + (ROWS - 1) * SP + CELL + 2
+    LEVELS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+    HEAD = "#39d353"
+    CELL_DUR = 0.45  # seconds per cube
+    NSEG = 30        # head + body
+
+    # static contribution grid (real calendar data)
+    grid = []
+    for wi, week in enumerate(weeks):
+        if wi >= COLS:
+            break
+        for di, day in enumerate(week["contributionDays"]):
+            if di >= ROWS:
+                break
+            level = min(day["contributionCount"], 4)
+            grid.append((OX + wi * SP, OY + di * SP, LEVELS[level]))
+
+    # serpentine path: bottom row L->R, next R->L, ... ; wraps to start for a seamless loop
+    path = []
+    for r in range(ROWS - 1, -1, -1):
+        cols = range(COLS) if (ROWS - 1 - r) % 2 == 0 else range(COLS - 1, -1, -1)
+        path.extend((c, r) for c in cols)
+    path.append(path[0])
+    N = len(path)
+    cycle = round(N * CELL_DUR, 1)
+
+    # body colors: head bright green -> tail dark
+    body_colors = [HEAD] + [lerp_hex("#26a641", "#0e4429", i / (NSEG - 1)) for i in range(1, NSEG)]
+
+    kf = []
+    for i, (c, r) in enumerate(path):
+        if i == 0:
+            continue
+        pct = round(i / N * 100, 4)
+        dx, dy = c * SP, (r - (ROWS - 1)) * SP
+        kf.append(f"{pct}%{{animation-timing-function:steps(1,end);transform:translate3d({dx}px,{dy}px,0)}}")
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+        f'viewBox="0 0 {W} {H}">',
+        "<style>",
+        f"@keyframes snakePath{{{' '.join(kf)}}}",
+        f".seg{{animation:snakePath {cycle}s linear infinite;shape-rendering:crispEdges}}",
+        "</style>",
+        f'<rect width="{W}" height="{H}" fill="{OUTER_BG}"/>',
+    ]
+    for x, y, fill in grid:
+        parts.append(
+            f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" fill="{fill}"/>'
+        )
+    for i in range(NSEG):
+        parts.append(
+            f'<rect class="seg" x="{OX}" y="{OY + (ROWS - 1) * SP}" width="{CELL}" '
+            f'height="{CELL}" rx="2" fill="{body_colors[i]}" '
+            f'style="animation-delay:-{round(i * CELL_DUR, 2)}s"/>'
+        )
+    parts.append("</svg>")
+    return "\n".join(parts)
 
 
 def render_streak_svg(streaks):
