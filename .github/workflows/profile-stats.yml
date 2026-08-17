@@ -21,6 +21,7 @@ jobs:
         run: python scripts/generate_stats.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
 
       - name: Commit and push
         run: |

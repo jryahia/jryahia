@@ -12,7 +12,8 @@ import urllib.request
 
 API = "https://api.github.com"
 USER = "jryahia"
-TOKEN = os.environ.get("GITHUB_TOKEN", "")
+TOKEN = os.environ.get("STATS_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
+PRIVATE_FALLBACK = int(os.environ.get("PRIVATE_REPOS", "0") or 0)
 
 # H2S Computer DNA palette
 OUTER_BG = "#0a0a0b"
@@ -42,11 +43,16 @@ def graphql(query):
 
 
 def main():
-    user = req(f"/users/{USER}")
+    user = req("/user") if TOKEN else req(f"/users/{USER}")
     repos = []
     page = 1
     while True:
-        batch = req(f"/users/{USER}/repos?per_page=100&page={page}&type=public")
+        if TOKEN:
+            # authenticated: real total incl. private repos
+            endpoint = f"/user/repos?per_page=100&page={page}&affiliation=owner&visibility=all"
+        else:
+            endpoint = f"/users/{USER}/repos?per_page=100&page={page}&type=public"
+        batch = req(endpoint)
         if not batch:
             break
         repos.extend(batch)
@@ -54,6 +60,9 @@ def main():
 
     stars = sum(r["stargazers_count"] for r in repos)
     forks = sum(r["forks_count"] for r in repos)
+
+    # private repos the token can't list (fallback when running with GITHUB_TOKEN only)
+    repo_total = len(repos) + (PRIVATE_FALLBACK if not TOKEN else 0)
 
     langs = {}
     for r in repos:
@@ -75,15 +84,14 @@ def main():
         except Exception:
             commits = "n/a"
 
-    public_repos = user["public_repos"]
     followers = user["followers"]
 
-    svg = render_svg(public_repos, commits, forks, followers, top_langs, total_lang)
+    svg = render_svg(repo_total, commits, forks, followers, top_langs, total_lang)
     out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "output")
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "stats.svg"), "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"OK stats.svg: repos={public_repos} commits={commits} "
+    print(f"OK stats.svg: repos={repo_total} (incl. private) commits={commits} "
           f"forks={forks} followers={followers} langs={dict(top_langs)}")
 
 
