@@ -35,22 +35,8 @@ I design and build **AI-powered products, automation systems, and polished websi
 
 ## Tech Stack
 
-**Full-Stack**
-
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,javascript,typescript,react,nextjs,nodejs,express,fastapi,mongodb,postgres,mysql,redis,docker,git&perline=14" alt="Full-Stack" />
-</p>
-
-**Prompt Engineering & AI Automation**
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=openai,anthropic,langchain,huggingface,n8n,playwright,selenium,postman,vercel,linux,github&perline=11" alt="AI & Automation" />
-</p>
-
-**Web Design**
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,threejs,vite,tailwind,figma,webflow,wordpress,ps,xd&perline=10" alt="Web Design" />
+  <img src="https://raw.githubusercontent.com/jryahia/jryahia/main/output/skills.svg" alt="Tech Stack" />
 </p>
 
 ---

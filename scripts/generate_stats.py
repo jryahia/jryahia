@@ -7,6 +7,7 @@ Runs daily via .github/workflows/profile-stats.yml.
 """
 import json
 import os
+import re
 import sys
 import urllib.request
 
@@ -103,6 +104,14 @@ def main():
     with open(os.path.join(out_dir, "streak.svg"), "w", encoding="utf-8") as f:
         f.write(streak_svg)
 
+    icons = load_icons()
+    if len(icons) < 30:
+        print(f"WARN only {len(icons)}/35 icons available, skipping skills.svg")
+    else:
+        skills_svg = render_skills_svg(icons)
+        with open(os.path.join(out_dir, "skills.svg"), "w", encoding="utf-8") as f:
+            f.write(skills_svg)
+
     print(f"OK stats.svg: repos={repo_total} (incl. private) commits={commits} "
           f"forks={forks} followers={followers} langs={dict(top_langs)} "
           f"streak={streaks}")
@@ -137,6 +146,88 @@ def compute_streaks(weeks):
         current += 1
         i -= 1
     return {"current": current, "longest": longest, "year": year}
+
+
+def load_icons():
+    """Load the 35 normalized 256x256 icon tiles from scripts/icons/."""
+    icon_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "icons")
+    icons = {}
+    for fname in os.listdir(icon_dir):
+        if not fname.endswith(".svg"):
+            continue
+        name = fname[:-4]
+        raw = open(os.path.join(icon_dir, fname), encoding="utf-8").read()
+        m = re.search(r'<svg[^>]*viewBox="0 0 256 256"[^>]*>(.*?)</svg>', raw, re.S)
+        if m:
+            icons[name] = m.group(1)
+    return icons
+
+
+def render_skills_svg(icons):
+    """Animated tech-stack card: 3 grouped rows of skill tiles.
+
+    Every icon gently bobs in a wave (staggered delays, loops forever) and the
+    group titles fade-slide in on load. Pure CSS keyframes inside the SVG, so
+    the animation runs when the image is embedded via <img> in the README.
+    """
+    GROUPS = [
+        ("FULL-STACK",
+         ["python", "javascript", "typescript", "react", "nextjs", "nodejs",
+          "express", "fastapi", "mongodb", "postgres", "mysql", "redis",
+          "docker", "git"]),
+        ("PROMPT ENGINEERING &amp; AI AUTOMATION",
+         ["openai", "anthropic", "langchain", "huggingface", "n8n",
+          "playwright", "selenium", "postman", "vercel", "linux", "github"]),
+        ("WEB DESIGN",
+         ["html", "css", "threejs", "vite", "tailwind", "figma", "webflow",
+          "wordpress", "ps", "xd"]),
+    ]
+    GREEN = "#39d353"
+    ICON, GAP = 48, 12
+    TITLE_H, PAD = 34, 24
+    pitch = ICON + GAP
+    max_row = max(len(g[1]) for g in GROUPS)
+    W = max_row * pitch - GAP + 2 * PAD
+    H = len(GROUPS) * (TITLE_H + ICON) + 2 * PAD
+    scale = ICON / 256.0
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" '
+        f'viewBox="0 0 {W} {H}" fill="none">',
+        "<style>",
+        "@keyframes wave{0%,100%{transform:translateY(0)}"
+        "50%{transform:translateY(-7px)}}",
+        ".ic{animation:wave 2.6s ease-in-out infinite}",
+        "@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}"
+        "to{opacity:1;transform:translateY(0)}}",
+        ".t{animation:fadeIn .8s ease forwards;opacity:0}",
+        "</style>",
+        f'<rect width="{W}" height="{H}" rx="16" fill="{OUTER_BG}"/>',
+    ]
+    idx = 0
+    for gi, (title, names) in enumerate(GROUPS):
+        y = PAD + gi * (TITLE_H + ICON)
+        parts.append(
+            f'<text x="{PAD}" y="{y + 14}" fill="{GREEN}" font-family="{FONT}" '
+            f'font-size="15" font-weight="800" letter-spacing="3" class="t" '
+            f'style="animation-delay:{gi * 0.25}s">{title}</text>'
+        )
+        row_w = len(names) * pitch - GAP
+        x0 = (W - row_w) / 2
+        for ni, name in enumerate(names):
+            body = icons.get(name)
+            if not body:
+                continue
+            x = x0 + ni * pitch
+            delay = -idx * 0.13
+            parts.append(
+                f'<g transform="translate({x:.1f},{y + TITLE_H}) scale({scale:.4f})">'
+                f'<g class="ic" style="animation-delay:{delay:.2f}s">{body}</g></g>'
+            )
+            idx += 1
+    parts.append("</svg>")
+    return "\n".join(parts)
 
 
 def render_streak_svg(streaks):
