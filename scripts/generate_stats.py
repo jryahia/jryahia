@@ -2,7 +2,7 @@
 """Generate output/stats.svg for the jryahia profile README.
 
 Pulls REAL data from the GitHub REST + GraphQL APIs and renders a
-branded dark/orange SVG (H2S DNA: #0a0a0b bg, #f97316 accent).
+branded dark/green SVG (GitHub contribution palette on #0a0a0b).
 Runs daily via .github/workflows/profile-stats.yml.
 """
 import json
@@ -15,11 +15,12 @@ USER = "jryahia"
 TOKEN = os.environ.get("STATS_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
 PRIVATE_FALLBACK = int(os.environ.get("PRIVATE_REPOS", "0") or 0)
 
-# H2S Computer DNA palette
+# H2S Computer DNA palette → now all GitHub green
 OUTER_BG = "#0a0a0b"
 TILE_BG = "#161b22"
 BORDER = "#21262d"
-ORANGE = "#f97316"
+ORANGE = "#39d353"
+GREEN = "#39d353"
 TEXT = "#e6edf3"
 MUTED = "#8b949e"
 FONT = "'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif"

@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&duration=3200&pause=900&color=F97316&center=true&vCenter=true&width=640&height=70&lines=Full-stack+Developer;AI+%26+Automation+Engineer;Web+Designer" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&duration=3200&pause=900&color=39D353&center=true&vCenter=true&width=640&height=70&lines=Full-stack+Developer;AI+%26+Automation+Engineer;Web+Designer" alt="Typing SVG" />
 
 # Yahya Jarray
 
 **Building AI products, automation pipelines & modern web experiences.**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-161b22?style=for-the-badge&logo=linkedin&logoColor=f97316)](https://linkedin.com/in/yahya-jarray)
-[![Portfolio](https://img.shields.io/badge/Portfolio-161b22?style=for-the-badge&logo=githubpages&logoColor=f97316)](https://jryahia.github.io/straw-hat-dev-portfolio/)
-[![Email](https://img.shields.io/badge/Email-161b22?style=for-the-badge&logo=gmail&logoColor=f97316)](mailto:yahiajarray43@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-161b22?style=for-the-badge&logo=linkedin&logoColor=39d353)](https://linkedin.com/in/yahya-jarray)
+[![Portfolio](https://img.shields.io/badge/Portfolio-161b22?style=for-the-badge&logo=githubpages&logoColor=39d353)](https://jryahia.github.io/straw-hat-dev-portfolio/)
+[![Email](https://img.shields.io/badge/Email-161b22?style=for-the-badge&logo=gmail&logoColor=39d353)](mailto:yahiajarray43@gmail.com)
 
 </div>
 
@@ -62,6 +62,6 @@ I design and build **AI-powered products, automation systems, and polished websi
 
 *Building real products that solve real problems — one repo at a time.*
 
-![Profile views](https://komarev.com/ghpvc/?username=jryahia&color=f97316&style=flat-square&label=Profile+Views)
+![Profile views](https://komarev.com/ghpvc/?username=jryahia&color=39d353&style=flat-square&label=Profile+Views)
 
 </div>
