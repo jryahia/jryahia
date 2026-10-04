@@ -87,15 +87,15 @@ Closed-source systems. Each link opens a case study with the problem, architectu
 - [Appointment Setter](https://jryahia.github.io/showcase-ghl-appointment-setter/) &mdash; qualifies leads and books into the GHL calendar
 - [Lead Follow-Up](https://jryahia.github.io/showcase-ghl-lead-followup/) &mdash; tier-based follow-up sequences
 - [Missed-Call Text-Back](https://jryahia.github.io/showcase-ghl-missed-call-textback/) &mdash; SMS reply to every missed call
-- [Review Automation](https://jryahia.github.io/showcase-ghl-review-automation/) &mdash; review requests after each completed job
+- [Review Automation](https://jryahia.github.io/showcase-ghl-review-automation/) &mdash; review requests after each completed job (prototype, sending simulated)
 
-**n8n / Make.com integrations**
+**Integration backends (webhooks for n8n / Make.com, CRM APIs)**
 - [n8n Support Inbox](https://jryahia.github.io/showcase-n8n-support-inbox/) &mdash; WhatsApp, email and chat in one inbox with human-approved AI drafts
-- [n8n Reporting Agent](https://jryahia.github.io/showcase-n8n-reporting-agent/) &mdash; scheduled multi-source reports by email or Slack
-- [Make Invoice Automation](https://jryahia.github.io/showcase-make-invoice-automation/) &mdash; invoice emails to structured accounting data
+- [n8n Reporting Agent](https://jryahia.github.io/showcase-n8n-reporting-agent/) &mdash; scheduled reports by email or Slack (prototype, sample data sources)
+- [Make Invoice Automation](https://jryahia.github.io/showcase-make-invoice-automation/) &mdash; invoice emails to structured data (accounting export mocked)
 - [Make CRM Sync](https://jryahia.github.io/showcase-make-crm-sync/) &mdash; form-to-HubSpot sync with deduplication
-- [Make E-Commerce Notifications](https://jryahia.github.io/showcase-make-ecommerce-notifications/) &mdash; orders from six platforms fanned out to four channels
-- [Make Social Media Pipeline](https://jryahia.github.io/showcase-make-social-media-pipeline/) &mdash; one idea to five platform-ready posts
+- [Make E-Commerce Notifications](https://jryahia.github.io/showcase-make-ecommerce-notifications/) &mdash; order intake from six platforms with channel fan-out (prototype, senders mocked)
+- [Make Social Media Pipeline](https://jryahia.github.io/showcase-make-social-media-pipeline/) &mdash; one idea to five platform-ready post variants (prototype, publishing mocked)
 - [HubSpot API Integration](https://jryahia.github.io/showcase-hubspot-api-integration/) &mdash; direct CRM integration for teams that outgrew no-code
 - [Abandoned Cart Recovery](https://jryahia.github.io/showcase-abandoned-cart-recovery/) &mdash; sequenced recovery with traceable revenue attribution
 - [CRM Data Enrichment](https://jryahia.github.io/showcase-crm-data-enrichment/) &mdash; enrichment pipeline prototype (demo engine)
