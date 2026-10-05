@@ -3,10 +3,10 @@
 <text x="30" y="46" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">GITHUB STATS</text>
 <text x="870" y="46" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" text-anchor="end">@jryahia · updated daily</text>
 <rect x="30" y="64" width="195" height="92" rx="12" fill="#161b22" stroke="#21262d" stroke-width="1"/>
-<text x="127.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">84</text>
+<text x="127.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">109</text>
 <text x="127.5" y="142" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2" text-anchor="middle">REPOS</text>
 <rect x="245" y="64" width="195" height="92" rx="12" fill="#161b22" stroke="#21262d" stroke-width="1"/>
-<text x="342.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">450</text>
+<text x="342.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">586</text>
 <text x="342.5" y="142" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2" text-anchor="middle">COMMITS / YEAR</text>
 <rect x="460" y="64" width="195" height="92" rx="12" fill="#161b22" stroke="#21262d" stroke-width="1"/>
 <text x="557.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">0</text>
@@ -15,18 +15,18 @@
 <text x="772.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">4</text>
 <text x="772.5" y="142" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2" text-anchor="middle">FOLLOWERS</text>
 <text x="30" y="188" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="3">TOP LANGUAGES</text>
-<text x="30" y="214" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">Python</text>
+<text x="30" y="214" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">HTML</text>
 <rect x="140" y="202" width="560" height="10" rx="5" fill="#161b22"/>
-<rect x="140" y="202" width="291" height="10" rx="5" fill="#39d353"/>
-<text x="720" y="214" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">52% · 44 repos</text>
-<text x="30" y="240" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">HTML</text>
+<rect x="140" y="202" width="246" height="10" rx="5" fill="#39d353"/>
+<text x="720" y="214" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">44% · 48 repos</text>
+<text x="30" y="240" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">Python</text>
 <rect x="140" y="228" width="560" height="10" rx="5" fill="#161b22"/>
-<rect x="140" y="228" width="151" height="10" rx="5" fill="#39d353"/>
-<text x="720" y="240" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">27% · 23 repos</text>
+<rect x="140" y="228" width="224" height="10" rx="5" fill="#39d353"/>
+<text x="720" y="240" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">40% · 44 repos</text>
 <text x="30" y="266" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">JavaScript</text>
 <rect x="140" y="254" width="560" height="10" rx="5" fill="#161b22"/>
-<rect x="140" y="254" width="106" height="10" rx="5" fill="#39d353"/>
-<text x="720" y="266" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">19% · 16 repos</text>
+<rect x="140" y="254" width="84" height="10" rx="5" fill="#39d353"/>
+<text x="720" y="266" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">15% · 16 repos</text>
 <text x="30" y="292" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">TypeScript</text>
 <rect x="140" y="280" width="560" height="10" rx="5" fill="#161b22"/>
 <rect x="140" y="280" width="8" height="10" rx="5" fill="#39d353"/>
