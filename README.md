@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&duration=3200&pause=900&color=39D353&center=true&vCenter=true&width=640&height=70&lines=Full-stack+Developer;AI+%26+Automation+Engineer;Web+Designer" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=24&duration=3200&pause=900&color=39D353&center=true&vCenter=true&width=640&height=70&lines=Backend+%26+AI+Automation+Engineer;Python+%C2%B7+FastAPI+%C2%B7+CRM+Integrations;LLM+Agents+with+Server-Side+Guardrails" alt="Typing SVG" />
 
 # Yahya Jarray
 
-**Building AI products, automation pipelines & modern web experiences.**
+**Backend & AI Automation Engineer** &middot; Python / FastAPI &middot; Integrations &middot; LLM agents
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-161b22?style=for-the-badge&logo=linkedin&logoColor=39d353)](https://linkedin.com/in/yahya-jarray)
 [![Portfolio](https://img.shields.io/badge/Portfolio-161b22?style=for-the-badge&logo=githubpages&logoColor=39d353)](https://jryahia.github.io/straw-hat-dev-portfolio/)
@@ -16,7 +16,9 @@
 
 ## About
 
-I design and build **AI-powered products, automation systems, and polished websites** — end to end. From LLM chatbots and RAG pipelines to n8n / Make / GoHighLevel automation and production-ready client sites, I ship things that work, look sharp, and solve real problems.
+**Backend & AI Automation Engineer.** I build Python / FastAPI services that connect business systems: CRM integrations (HubSpot, GoHighLevel), webhook backends for n8n and Make.com, and LLM agents that answer customers on WhatsApp and the web. I take projects end to end, from API design and data model to deployment and the dashboard the client uses.
+
+**How I work.** 28 of the services on this profile ship with a pytest suite and most include a Dockerfile. Business rules such as pricing limits, opt-outs and handoff triggers are enforced on the server rather than left to the client or the model, and several services refuse to start on insecure default secrets.
 
 ---
 
@@ -27,7 +29,7 @@ I design and build **AI-powered products, automation systems, and polished websi
 <td width="50%" valign="top">
 
 **[Clip Agent Pro](https://jryahia.github.io/showcase-clip-agent-pro/)**<br/>
-<sub>Private product &middot; case study</sub>
+<sub>Private product &middot; case study &middot; release builds in GitHub Actions</sub>
 
 Desktop app that turns long videos into captioned 9:16 clips. It transcribes locally, proposes moments with reasons, and cuts and captions in one pass.
 
@@ -37,7 +39,7 @@ Desktop app that turns long videos into captioned 9:16 clips. It transcribes loc
 <td width="50%" valign="top">
 
 **[n8n Workflow Agent](https://github.com/jryahia/n8n-workflow-agent)**<br/>
-<sub>Open source</sub>
+<sub>Open source &middot; 45 tests</sub>
 
 Describe a workflow in plain language and get a validated n8n workflow JSON, deployed to a live n8n instance with one click.
 
@@ -49,7 +51,7 @@ Describe a workflow in plain language and get a validated n8n workflow JSON, dep
 <td width="50%" valign="top">
 
 **[WhatsApp Sales Agent](https://jryahia.github.io/showcase-whatsapp-sales-agent/)**<br/>
-<sub>Private project &middot; case study</sub>
+<sub>Private project &middot; case study &middot; 16 tests</sub>
 
 WhatsApp sales assistant configured from a dashboard: catalog, tone, rules and human handoff. Pricing limits are enforced server-side on every order.
 
@@ -59,7 +61,7 @@ WhatsApp sales assistant configured from a dashboard: catalog, tone, rules and h
 <td width="50%" valign="top">
 
 **[AI Chatbot Builder Pro](https://github.com/jryahia/ai-chatbot-builder-pro)**<br/>
-<sub>Open source</sub>
+<sub>Open source &middot; 164 tests</sub>
 
 RAG chatbot builder with hybrid vector + BM25 retrieval, re-ranking, multi-provider LLMs and an embeddable widget.
 
@@ -105,6 +107,7 @@ Closed-source systems. Each link opens a case study with the problem, architectu
 - [Clip Agent Pro Landing](https://jryahia.github.io/showcase-clip-agent-pro-landing/) &mdash; 3D product landing page
 - [Job Finder](https://jryahia.github.io/showcase-job-finder/) &mdash; self-hosted job aggregator across 16+ sources
 - [Self Progress](https://jryahia.github.io/showcase-self-progress/) &mdash; life tracker with Normal and ADHD modes
+- [NEXUS Outreach Core](https://jryahia.github.io/showcase-nexus-outreach-core/) &mdash; local-first lead enrichment and paced outreach pipeline
 - [Automia](https://jryahia.github.io/showcase-automia/) &mdash; automation studio website
 
 ---
