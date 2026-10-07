@@ -75,7 +75,7 @@ RAG chatbot builder with hybrid vector + BM25 retrieval, re-ranking, multi-provi
 
 ## Private / Client Projects
 
-Closed-source systems. Each link opens a case study with the problem, architecture, stack and real screenshots. The source code stays private.
+Closed-source systems. Each link opens a case study with the problem, architecture and stack, plus real screenshots where the project has a UI. The source code stays private.
 
 **AI agents & LLM systems**
 - [WhatsApp Sales Agent](https://jryahia.github.io/showcase-whatsapp-sales-agent/) &mdash; configurable sales assistant with server-side pricing guardrails
@@ -84,6 +84,9 @@ Closed-source systems. Each link opens a case study with the problem, architectu
 - [AI Agent Config Dashboard](https://jryahia.github.io/showcase-ai-agent-dashboard/) &mdash; personality, guardrails and business rules for AI agents
 - [Brand Voice System](https://jryahia.github.io/showcase-brand-voice-system/) &mdash; brand guidelines turned into consistent system prompts
 - [AI Productivity Hub](https://jryahia.github.io/showcase-ai-productivity-hub/) &mdash; six productivity tools synced into one dashboard with automation rules
+- [ClipHunter](https://jryahia.github.io/showcase-cliphunter/) &mdash; computer-use agent that operates a desktop app through its UI, behind a hard posting gate (prototype)
+- [Reddit Content Agent](https://jryahia.github.io/showcase-reddit-content-agent/) &mdash; LLM drafting with a Telegram approval gate on every post
+- [Outreach Automation API](https://jryahia.github.io/showcase-ai-outreach-agent/) &mdash; B2B outreach backend with researched personalization (in development)
 
 **GoHighLevel automations**
 - [Appointment Setter](https://jryahia.github.io/showcase-ghl-appointment-setter/) &mdash; qualifies leads and books into the GHL calendar
@@ -101,6 +104,11 @@ Closed-source systems. Each link opens a case study with the problem, architectu
 - [HubSpot API Integration](https://jryahia.github.io/showcase-hubspot-api-integration/) &mdash; direct CRM integration for teams that outgrew no-code
 - [Abandoned Cart Recovery](https://jryahia.github.io/showcase-abandoned-cart-recovery/) &mdash; sequenced recovery with traceable revenue attribution
 - [CRM Data Enrichment](https://jryahia.github.io/showcase-crm-data-enrichment/) &mdash; enrichment pipeline prototype (demo engine)
+- [Local Market Lead Scanner](https://jryahia.github.io/showcase-local-market-lead-scanner/) &mdash; open map data to an enriched, ranked prospect report
+
+**Execution & monitoring systems**
+- [Exchange Execution Pipeline](https://jryahia.github.io/showcase-exchange-execution-pipeline/) &mdash; event-driven order execution with risk controls, exchange APIs and full logging
+- [Prediction Market Monitor](https://jryahia.github.io/showcase-prediction-market-monitor/) &mdash; real-time on-chain monitoring with a paper-trading simulator
 
 **Products & web**
 - [Clip Agent Pro](https://jryahia.github.io/showcase-clip-agent-pro/) &mdash; local desktop clip extractor
