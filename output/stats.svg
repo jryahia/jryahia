@@ -3,7 +3,7 @@
 <text x="30" y="46" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">GITHUB STATS</text>
 <text x="870" y="46" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" text-anchor="end">@jryahia · updated daily</text>
 <rect x="30" y="64" width="195" height="92" rx="12" fill="#161b22" stroke="#21262d" stroke-width="1"/>
-<text x="127.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">136</text>
+<text x="127.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">137</text>
 <text x="127.5" y="142" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2" text-anchor="middle">REPOS</text>
 <rect x="245" y="64" width="195" height="92" rx="12" fill="#161b22" stroke="#21262d" stroke-width="1"/>
 <text x="342.5" y="120" fill="#39d353" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle">620</text>
@@ -29,8 +29,8 @@
 <text x="720" y="266" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">12% · 17 repos</text>
 <text x="30" y="292" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">TypeScript</text>
 <rect x="140" y="280" width="560" height="10" rx="5" fill="#161b22"/>
-<rect x="140" y="280" width="56" height="10" rx="5" fill="#39d353"/>
-<text x="720" y="292" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">10% · 14 repos</text>
+<rect x="140" y="280" width="62" height="10" rx="5" fill="#39d353"/>
+<text x="720" y="292" fill="#8b949e" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="end">11% · 15 repos</text>
 <text x="30" y="318" fill="#e6edf3" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600">Rust</text>
 <rect x="140" y="306" width="560" height="10" rx="5" fill="#161b22"/>
 <rect x="140" y="306" width="8" height="10" rx="5" fill="#39d353"/>
