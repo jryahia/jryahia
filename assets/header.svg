@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="YAHYA JARRAY">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070a"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#39d353" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#39d353" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#grid)"/>
+  <rect width="1280" height="320" fill="url(#glow)"/>
+  <g transform="translate(1010 160)" fill="none" stroke="#39d353" stroke-width="1.4">
+    <path d="M0 -92 L80 -46 L80 46 L0 92 L-80 46 L-80 -46 Z" stroke-opacity="0.9"/>
+    <path d="M0 -92 L0 0 L80 46 M0 0 L-80 46" stroke-opacity="0.55"/>
+    <path d="M0 -54 L47 -27 L47 27 L0 54 L-47 27 L-47 -27 Z" stroke-opacity="0.35"/>
+    <circle r="128" stroke-opacity="0.12"/>
+    <circle r="3.5" fill="#39d353" stroke="none"/>
+  </g>
+  <rect x="72" y="74" width="40" height="3" fill="#39d353"/>
+  <text x="124" y="80" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#39d353">CREATIVE ENGINEER &amp; SYSTEMS BUILDER</text>
+  <text x="72" y="160" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-1.5" fill="#f5f7fa">YAHYA JARRAY</text>
+  <text x="72" y="208" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#9aa4b2">Founder, Automia Labs &middot; WebGL Product Realism &amp; AI Systems</text>
+  <text x="72" y="258" font-family="Consolas, Menlo, monospace" font-size="14" fill="#6b7685">21 WebGL builds at Lighthouse mobile 95-100  /  23 live builds at 7/7 security headers  /  87 projects</text>
+</svg>
