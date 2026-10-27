@@ -202,6 +202,18 @@ Interactive storefronts, performance brands and retail sites that sell.
 <sub><code>Lighthouse 98 &middot; CLS 0.016 &middot; 7/7 headers</code></sub>
 </td>
 <td width="33%" valign="top">
+<a href="https://intown-hq.vercel.app/"><img src="https://www.automialabs.net/projects/intown-774.webp" alt="InTown" width="100%" /></a><br/>
+<b><a href="https://intown-hq.vercel.app/">InTown</a></b><br/>
+<sub>IT services, Rome EUR</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://nuovispazi-hq.vercel.app/"><img src="https://www.automialabs.net/projects/nuovispazi-774.webp" alt="Nuovi Spazi" width="100%" /></a><br/>
+<b><a href="https://nuovispazi-hq.vercel.app/">Nuovi Spazi</a></b><br/>
+<sub>Advertising agency, Rome</sub>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
 <a href="https://lauteri-hq.vercel.app/"><img src="https://www.automialabs.net/projects/lauteri-774.webp" alt="Lauteri" width="100%" /></a><br/>
 <b><a href="https://lauteri-hq.vercel.app/">Lauteri</a></b><br/>
 <sub>Local business</sub>
@@ -211,25 +223,52 @@ Interactive storefronts, performance brands and retail sites that sell.
 <b><a href="https://opto-ricci-hq.vercel.app/">Opto Ricci</a></b><br/>
 <sub>Optics retail</sub>
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top">
 <a href="https://cellulopoli-hq.vercel.app/"><img src="https://www.automialabs.net/projects/cellulopoli-774.webp" alt="Cellulopoli" width="100%" /></a><br/>
 <b><a href="https://cellulopoli-hq.vercel.app/">Cellulopoli</a></b><br/>
 <sub>Phone retail</sub>
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top">
 <a href="https://telemania-hq.vercel.app/"><img src="https://www.automialabs.net/projects/telemania-774.webp" alt="Telemania" width="100%" /></a><br/>
 <b><a href="https://telemania-hq.vercel.app/">Telemania</a></b><br/>
 <sub>Electronics retail</sub>
 </td>
 <td width="33%" valign="top">
+<a href="https://datamatic-hq.vercel.app/"><img src="https://www.automialabs.net/projects/datamatic-774.webp" alt="Datamatic" width="100%" /></a><br/>
+<b><a href="https://datamatic-hq.vercel.app/">Datamatic</a></b><br/>
+<sub>IT services</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://h2s-hq.vercel.app/"><img src="https://www.automialabs.net/projects/h2s-774.webp" alt="H2S" width="100%" /></a><br/>
+<b><a href="https://h2s-hq.vercel.app/">H2S</a></b><br/>
+<sub>Industrial services</sub>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a href="https://inode-hq.vercel.app/"><img src="https://www.automialabs.net/projects/inode-774.webp" alt="iNode" width="100%" /></a><br/>
+<b><a href="https://inode-hq.vercel.app/">iNode</a></b><br/>
+<sub>Software house</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://pegasus-hq.vercel.app/"><img src="https://www.automialabs.net/projects/pegasus-774.webp" alt="Pegasus" width="100%" /></a><br/>
+<b><a href="https://pegasus-hq.vercel.app/">Pegasus</a></b><br/>
+<sub>Business services</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://amtechnology-hq.vercel.app/"><img src="https://www.automialabs.net/projects/amtechnology-774.webp" alt="AM Technology" width="100%" /></a><br/>
+<b><a href="https://amtechnology-hq.vercel.app/">AM Technology</a></b><br/>
+<sub>Technology services</sub>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
 <a href="https://max-pc-hq.vercel.app/"><img src="https://www.automialabs.net/projects/max-pc-774.webp" alt="Max PC" width="100%" /></a><br/>
 <b><a href="https://max-pc-hq.vercel.app/">Max PC</a></b><br/>
 <sub>Computer retail and repair</sub>
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top">
 <a href="https://audio-company-hq.vercel.app/"><img src="https://www.automialabs.net/projects/audio-company-774.webp" alt="Audio Company" width="100%" /></a><br/>
 <b><a href="https://audio-company-hq.vercel.app/">Audio Company</a></b><br/>
@@ -260,45 +299,6 @@ Agents, automation pipelines, desktop software and B2B platforms.
 <b><a href="https://automia-quantum-wealth-v15.vercel.app/">Automia Quantum Wealth</a></b><br/>
 <sub>Private wealth management</sub><br/>
 <sub><code>Lighthouse 95 &middot; CLS 0 &middot; 7/7 headers</code></sub>
-</td>
-<td width="33%" valign="top">
-<a href="https://intown-hq.vercel.app/"><img src="https://www.automialabs.net/projects/intown-774.webp" alt="InTown" width="100%" /></a><br/>
-<b><a href="https://intown-hq.vercel.app/">InTown</a></b><br/>
-<sub>IT services, Rome EUR</sub>
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top">
-<a href="https://nuovispazi-hq.vercel.app/"><img src="https://www.automialabs.net/projects/nuovispazi-774.webp" alt="Nuovi Spazi" width="100%" /></a><br/>
-<b><a href="https://nuovispazi-hq.vercel.app/">Nuovi Spazi</a></b><br/>
-<sub>Advertising agency, Rome</sub>
-</td>
-<td width="33%" valign="top">
-<a href="https://datamatic-hq.vercel.app/"><img src="https://www.automialabs.net/projects/datamatic-774.webp" alt="Datamatic" width="100%" /></a><br/>
-<b><a href="https://datamatic-hq.vercel.app/">Datamatic</a></b><br/>
-<sub>IT services</sub>
-</td>
-<td width="33%" valign="top">
-<a href="https://h2s-hq.vercel.app/"><img src="https://www.automialabs.net/projects/h2s-774.webp" alt="H2S" width="100%" /></a><br/>
-<b><a href="https://h2s-hq.vercel.app/">H2S</a></b><br/>
-<sub>Industrial services</sub>
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top">
-<a href="https://inode-hq.vercel.app/"><img src="https://www.automialabs.net/projects/inode-774.webp" alt="iNode" width="100%" /></a><br/>
-<b><a href="https://inode-hq.vercel.app/">iNode</a></b><br/>
-<sub>Software house</sub>
-</td>
-<td width="33%" valign="top">
-<a href="https://pegasus-hq.vercel.app/"><img src="https://www.automialabs.net/projects/pegasus-774.webp" alt="Pegasus" width="100%" /></a><br/>
-<b><a href="https://pegasus-hq.vercel.app/">Pegasus</a></b><br/>
-<sub>Business services</sub>
-</td>
-<td width="33%" valign="top">
-<a href="https://amtechnology-hq.vercel.app/"><img src="https://www.automialabs.net/projects/amtechnology-774.webp" alt="AM Technology" width="100%" /></a><br/>
-<b><a href="https://amtechnology-hq.vercel.app/">AM Technology</a></b><br/>
-<sub>Technology services</sub>
 </td>
 </tr>
 </table>
